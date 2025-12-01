@@ -40,12 +40,20 @@ git remote add origin https://github.com/crego/json-logic-builder.git
 git push -u origin main
 ```
 
-### Step 3: Get npm Access Token
+### Step 3: Get npm Granular Access Token
 
 1. Go to https://www.npmjs.com/settings/YOUR_USERNAME/tokens
-2. Click **"Generate New Token"** → **"Classic Token"**
-3. Select **"Automation"** type
-4. Copy the token immediately (you won't see it again!)
+2. Click **"Generate New Token"** → **"Granular Access Token"**
+3. Configure the token:
+   - **Token name**: `github-actions-json-logic-builder`
+   - **Expiration**: 365 days (or custom)
+   - **Packages and scopes**: Select packages
+     - Choose `@crego/json-logic-builder`
+     - **Permissions**: Read and write
+4. Click **"Generate token"**
+5. Copy the token immediately (you won't see it again!)
+
+> **Note**: Classic tokens are being deprecated (Dec 9, 2025). Use granular access tokens instead.
 
 ### Step 4: Add npm Token to GitHub Secrets
 

@@ -62,9 +62,10 @@ Three automated workflows are now configured:
    git push -u origin main
    ```
 
-3. **Add npm Token to GitHub**
+3. **Add npm Granular Access Token to GitHub**
    - Get token: https://www.npmjs.com/settings/YOUR_USERNAME/tokens
-   - Generate new "Automation" token
+   - Generate new **"Granular Access Token"** (Classic tokens deprecated Dec 9, 2025)
+   - Grant **Read and write** permissions to `@crego/json-logic-builder` package
    - Add to GitHub: https://github.com/crego/json-logic-builder/settings/secrets/actions
    - Secret name: `NPM_TOKEN`
 
