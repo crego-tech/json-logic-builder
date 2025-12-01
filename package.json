@@ -1,6 +1,6 @@
 {
   "name": "@crego/json-logic-builder",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "A visual builder for JsonLogic rules with drag-and-drop support",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
