@@ -1,0 +1,12 @@
+src
+node_modules
+.git
+.gitignore
+tsup.config.js
+tailwind.config.js
+*.log
+.DS_Store
+.env
+.env.local
+.vscode
+.idea

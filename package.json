@@ -1,0 +1,81 @@
+{
+  "name": "@crego/json-logic-builder",
+  "version": "1.0.1",
+  "description": "A visual builder for JsonLogic rules with drag-and-drop support",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.jsx --format cjs,esm --external react --external react-dom",
+    "dev": "tsup src/index.jsx --format cjs,esm --external react --external react-dom --watch",
+    "prepublishOnly": "pnpm build",
+    "release:patch": "npm version patch && git push --follow-tags",
+    "release:minor": "npm version minor && git push --follow-tags",
+    "release:major": "npm version major && git push --follow-tags",
+    "pack:check": "npm pack --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crego/json-logic-builder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/crego/json-logic-builder/issues"
+  },
+  "homepage": "https://github.com/crego/json-logic-builder#readme",
+  "keywords": [
+    "json-logic",
+    "jsonlogic",
+    "rule-builder",
+    "visual-builder",
+    "rule-engine",
+    "react",
+    "react-component",
+    "drag-and-drop",
+    "dnd-kit",
+    "tailwind",
+    "radix-ui"
+  ],
+  "author": "Crego",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-popover": "^1.1.15",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
+    "lucide-react": "^0.548.0",
+    "tailwind-merge": "^3.3.1",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.16",
+    "tsup": "^8.3.5",
+    "typescript": "^5.9.3"
+  }
+}
