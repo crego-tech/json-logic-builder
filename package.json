@@ -20,7 +20,11 @@
   "scripts": {
     "build": "tsup src/index.jsx --format cjs,esm --external react --external react-dom",
     "dev": "tsup src/index.jsx --format cjs,esm --external react --external react-dom --watch",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "pnpm build",
+    "release:patch": "npm version patch && git push --follow-tags",
+    "release:minor": "npm version minor && git push --follow-tags",
+    "release:major": "npm version major && git push --follow-tags",
+    "pack:check": "npm pack --dry-run"
   },
   "repository": {
     "type": "git",
